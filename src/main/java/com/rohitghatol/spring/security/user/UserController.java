@@ -20,7 +20,7 @@ public class UserController {
 	@Autowired
 	private UserRepository repository;
 
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(method = RequestMethod.GET)
 	public List<NUser> getUsers() {
 		List<NUser> copy = new ArrayList<NUser>();
@@ -30,7 +30,7 @@ public class UserController {
 		return copy;
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(method = RequestMethod.POST)
 	NUser addUser(@RequestBody NUser addedUser) {
 		return repository.save(addedUser);
@@ -42,14 +42,14 @@ public class UserController {
 		return repository.findById(id).get();
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	NUser updateUser(@PathVariable Long id, @RequestBody NUser updatedUser) {
 		updatedUser.setId(id);
 		return repository.save(updatedUser);
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	NUser removeUser(@PathVariable String id) {
 		NUser deletedUser = repository.findById(id).get();

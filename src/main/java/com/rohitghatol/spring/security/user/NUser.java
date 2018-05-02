@@ -28,10 +28,26 @@ public class NUser {
  
     private Date lastPasswordResetDate;
     
+    
+    
     @ManyToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
     private List<SysRole> roles;
     
-    
+	public NUser(Long id, String username, String password, String email, Date lastPasswordResetDate,
+			List<SysRole> roles) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.lastPasswordResetDate = lastPasswordResetDate;
+		this.roles = roles;
+	}
+	
+	public NUser( ) {
+		super();
+	}
+	
 	public Long getId() {
 		return id;
 	}

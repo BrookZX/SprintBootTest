@@ -53,7 +53,7 @@ public class AuthServiceImpl implements AuthService {
         final String rawPassword = userToAdd.getPassword();
         userToAdd.setPassword(encoder.encode(rawPassword));
         userToAdd.setLastPasswordResetDate(new Date());
-        userToAdd.setRoles(asList(new SysRole("ROLE_USER")));
+        userToAdd.setRoles(asList(new SysRole((long) 2, "ROLE_USER")));
         return userRepository.save(userToAdd);
     }
 
