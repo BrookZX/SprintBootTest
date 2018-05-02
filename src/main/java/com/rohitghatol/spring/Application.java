@@ -1,4 +1,5 @@
-package com.rohitghatol.spring.odata;
+package com.rohitghatol.spring;
+
 /*******************************************************************************
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements. See the NOTICE file
@@ -20,27 +21,27 @@ package com.rohitghatol.spring.odata;
 
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+ 
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class Application.
  */
-@EnableAutoConfiguration
-@Configuration
-@ComponentScan(basePackages = "com.rohitghatol.spring.odata")
-public class Application {
-
-	
-
+ 
+@SpringBootApplication
+@ComponentScan(basePackages = "com.rohitghatol.spring.security")
+@ComponentScan(basePackages = "com.rohitghatol.spring.odata") 
+public class Application extends SpringBootServletInitializer {
   /**
    * The main method.
    *
    * @param args the arguments
    */
   public static void main(String[] args) {
+		System.out.println("app start %%%%%%%%%%%%%%%%%%%%%%%%");
     SpringApplication.run(Application.class, args);
   }
 }

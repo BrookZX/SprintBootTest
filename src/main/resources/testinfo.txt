@@ -1,0 +1,45 @@
+1. Register: 
+
+Post: http://localhost:8080/springbootdemo-0.0.1-SNAPSHOT/auth/register
+
+{
+	"username": "zhaox",
+	"password": "abcd",
+	"email": "na"
+}
+
+2. Login:
+
+Post http://localhost:8080/springbootdemo-0.0.1-SNAPSHOT/auth
+{
+	"username": "zhaox",
+	"password": "abcd"
+}
+
+Response:
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFveCIsImNyZWF0ZWQiOjE1MjUyMjgyOTMxMzYsImV4cCI6MTUyNTgzMzA5M30.oueO4KesKsPv59Wt6bsyj9AP2u7wOAPZQzt8GCd2WmnbtY4F-etVF6JAbyU_vQUod-uyVMdihPK5WLpIXUHv9g"
+}
+
+3. Fetch user
+
+Get http://localhost:8080/springbootdemo-0.0.1-SNAPSHOT/users/?username=zhaox
+
+Header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFveCIsImNyZWF0ZWQiOjE1MjUyMjgyOTMxMzYsImV4cCI6MTUyNTgzMzA5M30.oueO4KesKsPv59Wt6bsyj9AP2u7wOAPZQzt8GCd2WmnbtY4F-etVF6JAbyU_vQUod-uyVMdihPK5WLpIXUHv9g
+
+Response
+{
+    "id": 1,
+    "username": "zhaox",
+    "password": "$2a$10$M3n.jpDyVE0paMygSxnYTeTQJ9hIBv1XoulKJiBlJXNCNt27z3pAO",
+    "email": "na",
+    "lastPasswordResetDate": "2018-05-02T02:22:44.000+0000",
+    "roles": []
+}
+
+
+==================
+JWT参数信息定义在 application.yml里面
+
+OData可以仿照("/users")service 里面进行控制
+
