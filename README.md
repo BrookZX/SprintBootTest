@@ -1,3 +1,6 @@
+Setup: 需要参考application.yml配置mysql数据库， 编译打包war手动部署到tomcat上
+
+==================
 1. Register: 
 
 Post: http://localhost:8080/springbootdemo-0.0.1-SNAPSHOT/auth/register
