@@ -73,3 +73,7 @@ Authorization Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFveCIsImNyZWF0ZWQiOjE1Mj
 1. 提供单独的log in 界面， 尤其是在CF环境
 2. 提供JWT的实现点
 3. 减少UAA交互
+
+
+===================================
+Spring MVC, 同样通过controller里面的path 进行控制， 如果是自开发loginpage需要在security config里面添加permitAll路径
