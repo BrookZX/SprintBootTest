@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Setup: 需要参考application.yml配置mysql数据库， 编译打包war手动部署到tomcat上
 
 ==================
@@ -80,3 +81,6 @@ Authorization Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFveCIsImNyZWF0ZWQiOjE1Mj
 
 ===================================
 Spring MVC, 同样通过controller里面的path 进行控制， 如果是自开发loginpage需要在security config里面添加permitAll路径
+=======
+# SprintBootTest
+>>>>>>> branch 'master' of https://github.com/i048920/SprintBootTest
