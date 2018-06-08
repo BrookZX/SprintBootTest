@@ -2,7 +2,6 @@ package com.ibso.spring.security.jwt;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 import com.ibso.spring.security.user.NUser;

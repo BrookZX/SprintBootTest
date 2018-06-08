@@ -114,7 +114,7 @@ public class GenericEdmProvider extends EdmProvider {
 		for (String entity : entityProviders.keySet()) {
 
 			EntityProvider entityProvider = entityProviders.get(entity);
-			EntityType entityType = entityProvider.getEntityType();
+			entityProvider.getEntityType();
 			if (entityProvider.getEntitySetName().equals(entitySetName)) {
 				result = new EntitySet();
 				result.setName(entityProvider.getEntitySetName());

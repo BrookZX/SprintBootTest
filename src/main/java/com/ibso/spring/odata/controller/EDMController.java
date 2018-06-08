@@ -25,7 +25,6 @@ import org.apache.olingo.server.api.serializer.SerializerException;
 import org.apache.olingo.server.core.ODataHandler;
 import org.apache.olingo.server.core.ODataHandlerException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,10 +51,6 @@ public class EDMController {
 	
 	/** The split. */
 	private int split = 0;
-	/** The ctx. */
-	@Autowired
-	private ApplicationContext ctx;
-
 	/** The edm provider. */
 	@Autowired
 	private EdmProvider edmProvider;
